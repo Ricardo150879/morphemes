@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head><title>Interact Morpheme</title>
+<style>
+ul, #myUL {
+  list-style-type: none;
+}
+
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.caret-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */'
+  transform: rotate(90deg);  
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+td{
+color: purple;
+font-weight: bold;
+border: 1px solid black;
+}
+
+.darkblue{
+    color:darkblue;
+}
+
+body{background-color:azure;
+}
+
+h1 {  
+  position: relative;    
+  font-family: "Raleway", Cursive;  
+  font-weight: 300;  
+  font-size: 40px;  
+  color: #080808;    
+  text-align: center;  
+}
+
+h4 {  
+  position: relative;    
+  font-family: "Raleway", Cursive;  
+  font-weight: 300;  
+  font-size: 21px;  
+  color: #454545;    
+  text-align: center;  
+}
+
+p, #myP{color: white;
+}
+
+#myP{color: navy;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Classification of some morphemes</h1>
+<p id="myP">TREE OF MORPHEMES</p>
+<p id="myP"><i>Try it yourself.</i><br>
+Click on the arrow(s) to open or close the tree branches.<p>
+
+<ul id="myUL">
+  <li><span class="caret">Morphemes</span>
+    <ul class="nested">
+      <li><span class="caret">Bound</span>
+       <ul class="nested">
+      <li><span class="caret">Affix</span>
+       <ul class="nested">
+      <li><span class="caret">Derivational</span>
+       <ul class="nested">
+      <li><span class="caret">Prefix</span>
+       <ul class="nested">
+       <li>pre-</li>
+       <li>un-</li>
+       <li>con-</li>
+       <li>dis-</li>
+       <li>in-</li>
+      <li>
+      </ul>
+      <li><span class="caret">Suffix</span>
+       <ul class="nested">
+       <li>-ly</li>
+       <li>-ist</li>
+       <li>-ment</li>
+      <li>
+      </ul>
+      <li>
+      </ul>
+      <li><span class="caret">Infectional</span>
+       <ul class="nested">
+      <li><span class="caret">Suffix</span>
+       <ul class="nested">
+       <li>-ing -en</li>
+       <li>-er -est</li>
+       <li>-ed</li>
+      <li>
+      </ul>
+      <li>
+      </ul>
+      </li>
+      </ul>
+      <li><span class="caret">Root</span>
+       <ul class="nested">
+       <li>gruntle</li>
+       <li>mit</li>
+       <li>fer</li>
+       <li>civ</li>
+       <li>doc</li>
+       <li>audi</li>
+      </li>
+      </ul>
+      </li>
+      </ul>
+      <li><span class="caret">Free</span>
+       <ul class="nested">
+       <li><span class="caret">Lexical morphemes - Open Class of word</span>
+       <ul class="nested">
+       <li>Nouns (girl, house)</li>
+       <li>Verbs (kick, look)</li>
+       <li>Adjectives (happy, long)</li>
+       <li>Adverb (quickly, evenly)</li>
+       </li>
+       </ul>
+       <li><span class="caret">Functional morphemes - Closed Class of word</span>
+       <ul class="nested">
+       <li>Derterminers</li>
+       <li>Conjunctions (and, but)</li>
+       <li>Prepostions (of, in)</li>
+       <li>Pronouns (I, he, you, they)</li>
+       <li>Auxiliary verbs (is)</li>
+       </li>
+       </ul>
+      </li>  
+    </ul>
+  </li>
+</ul>
+
+<script>
+var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+  toggler[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("active");
+    this.classList.toggle("caret-down");
+  });
+}
+</script>
+<br>
+
+<p id="myP">Exemple Table</p>
+
+<table>
+<tr>
+<td>quickly</td> <td>accomplish</td> <td>disagree</td>
+</tr>
+
+<tr>
+<td>forward</td> <td>beautiful</td> <td>mistake</td>
+</tr>
+
+<tr>
+<td>sideways</td> <td>careless</td> <td>intracellular</td>
+</tr>
+
+<tr>
+<td>flockwise</td> <td>manlike</td> <td>protagonist</td>
+</tr>
+
+<tr>
+<td>bianual</td> <td>undo</td> <td>advertise</td>
+</tr>
+
+<tr>
+<td>circumstance</td> <td>handsome</td> <td>solution</td> 
+</tr>
+
+<tr>
+<td>possible</td> <td>forecast</td> <td>accurate</td>
+</tr>
+
+<tr>
+<td>extraordinary</td> <td>hyperactive</td> <td>monolithic</td>
+</tr>
+
+<tr>
+<td>co-worker</td> <td>embody</td> <td>paradox</td>
+</tr>
+
+<tr>
+<td>encrypt</td> <td>malicious</td> <td>diversify</td>
+</tr>
+</table><br>
+
+<p id="myP"><i>Try it yourself rewriting the words in the exemple table</i></p><br>
+<textarea id="other" name="other" rows="3" cols="50" onkeyup="textChange()"></textarea>
+<div id="colorText"></div><br>
+
+<script>
+var textChange=function(){
+    var text=event.target.value;
+
+    if(text.indexOf("wise")>-1){
+        text=text.replace("wise", "<span class='darkblue'><strong>wise</strong></span>");
+    }
+
+    if(text.indexOf("ways")>-1){
+        text=text.replace("ways", "<span class='darkblue'><strong>ways</strong></span>");
+    }
+    
+   if(text.indexOf("ward")>-1){
+        text=text.replace("ward", "<span class='darkblue'><strong>ward</strong></span>");
+    }
+
+   if(text.indexOf("ly")>-1){
+        text=text.replace("ly", "<span class='darkblue'><strong>ly</strong></span>");
+    }
+
+   if(text.indexOf("circum")>-1){
+        text=text.replace("circum", "<span class='darkblue'><strong>circum</strong></span>");
+    }
+   
+   if(text.indexOf("bi")>-1){
+        text=text.replace("bi", "<span class='darkblue'><strong>bi</strong></span>");
+    }
+
+   if(text.indexOf("ible")>-1){
+        text=text.replace("ible", "<span class='darkblue'><strong>ible</strong></span>");
+    }
+
+   if(text.indexOf("co-")>-1){
+        text=text.replace("co-", "<span class='darkblue'><strong>co-</strong></span>");
+    }
+
+   if(text.indexOf("en")>-1){
+        text=text.replace("en", "<span class='darkblue'><strong>en</strong></span>");
+    }
+
+   if(text.indexOf("extra")>-1){
+        text=text.replace("extra", "<span class='darkblue'><strong>extra</strong></span>");
+    }
+
+   if(text.indexOf("ible")>-1){
+        text=text.replace("ible", "<span class='darkblue'><strong>ible</strong></span>");
+    }
+
+  if(text.indexOf("ful")>-1){
+        text=text.replace("ful", "<span class='darkblue'><strong>ful</strong></span>");
+    }
+
+  if(text.indexOf("less")>-1){
+        text=text.replace("less", "<span class='darkblue'><strong>less</strong></span>");
+    }
+
+  if(text.indexOf("ous")>-1){
+        text=text.replace("ous", "<span class='darkblue'><strong>ous</strong></span>");
+    }
+
+  if(text.indexOf("un")>-1){
+        text=text.replace("un", "<span class='darkblue'><strong>un</strong></span>");
+    }
+
+  if(text.indexOf("some")>-1){
+        text=text.replace("some", "<span class='darkblue'><strong>some</strong></span>");
+    }
+
+  if(text.indexOf("em")>-1){
+        text=text.replace("em", "<span class='darkblue'><strong>em</strong></span>");
+    }
+
+  if(text.indexOf("hy")>-1){
+        text=text.replace("hy", "<span class='darkblue'><strong>hy</strong></span>");
+    }
+
+  if(text.indexOf("fore")>-1){
+        text=text.replace("fore", "<span class='darkblue'><strong>fore</strong></span>");
+    }
+
+   if(text.indexOf("ous")>-1){
+        text=text.replace("ous", "<span class='darkblue'><strong>ous</strong></span>");
+    }
+
+   if(text.indexOf("like")>-1){
+        text=text.replace("like", "<span class='darkblue'><strong>like</strong></span>");
+    }
+
+   if(text.indexOf("ish")>-1){
+        text=text.replace("ish", "<span class='darkblue'><strong>ish</strong></span>");
+    }
+
+   if(text.indexOf("dis")>-1){
+        text=text.replace("dis", "<span class='darkblue'><strong>dis</strong></span>");
+    }
+
+   if(text.indexOf("mis")>-1){
+        text=text.replace("mis", "<span class='darkblue'><strong>mis</strong></span>");
+    }
+
+   if(text.indexOf("intra")>-1){
+        text=text.replace("intra", "<span class='darkblue'><strong>intra</strong></span>");
+    }
+
+   if(text.indexOf("ist")>-1){
+        text=text.replace("ist", "<span class='darkblue'><strong>ist</strong></span>");
+    }
+
+   if(text.indexOf("ise")>-1){
+        text=text.replace("ise", "<span class='darkblue'><strong>ise</strong></span>");
+    }
+
+   if(text.indexOf("ion")>-1){
+        text=text.replace("ion", "<span class='darkblue'><strong>ion</strong></span>");
+    }
+
+   if(text.indexOf("ate")>-1){
+        text=text.replace("ate", "<span class='darkblue'><strong>ate</strong></span>");
+    }
+
+  if(text.indexOf("mono")>-1){
+        text=text.replace("mono", "<span class='darkblue'><strong>mono</strong></span>");
+    }
+
+  if(text.indexOf("para")>-1){
+        text=text.replace("para", "<span class='darkblue'><strong>para</strong></span>");
+    }
+
+  if(text.indexOf("fy")>-1){
+        text=text.replace("fy", "<span class='darkblue'><strong>fy</strong></span>");
+    }
+
+   document.getElementById("colorText").innerHTML=text;
+}
+</script>
+
+<h4>Noun Suffix Words List</h4>
+
+<p style="background-color:darkgreen;">-ness -> state of being: heaviness, highness, sickness, dryness, coolness, baldness<br>
+
+-acy ->	quality: democracy, accuracy, lunacy, democracy, diplomacy, supremacy, autocracy, immediacy, obstinacy, intricacy, theocracy<br>
+
+-ist ->	person:	geologist, protagonist, sexist, scientist, theorist, communist, receptionist, technologist, nutritionist, antifeminist, phlebotomist, editorialist,<br>
+
+-al ->	process of: remedial, denial, personal, trial, criminal, arrival, seasonal, global, magical, national<br>
+
+-en -> become: sharpen, strengthen, loosen<br>
+
+-tion -> state of being: position, promotion, ambition, pollution, revolution, affection, caution, option, solution, revolution<br>
+ 
+-or -> person: creator, ablator, collaborator, inventor, abductor, irritator, franchisor<br>
+
+-ty -> quality of: extremity, validity, enormity, susceptibility, territoriality, respectability, sentimentality, intentionality,<br>
+
+-ment -> condition: enchantment,  argument, adjustment, achievement, amazement, punishment, payment,<br>
+
+-dom -> state of being: freedom, stardom, boredom, seldom, wisdom<br>
+
+-ence -> quality of: ambiance, consequence, absence, convenience, experience, patience<br>
+
+-ism -> belief: judaism, skepticism, escapism, exceptionalism, existentialism, despotism<br>
+
+-ship -> position held:	friendship, hardship, internship, flagship, hardship, township, lordship, kingship, starship, headship, wardship<br>
+
+-er -> the object that does a specified action: teacher, interpreter, reader, writer, listener, reporter, watcher<br>
+
+-ance -> state: tolerance, nuisance, importance, acceptance, assistance, appearance, compliance, resistance, attendance, reluctance</p>
+
+<h4>Verb Suffix Words List</h4>
+
+<p style="background-color:darkgreen;">-en -> become: sharpen, strengthen, loosen, brighten, darken, deepen<br>
+-fy -> Make: Justify, simplify, magnify, satisfy, diversify, intensify, exemplify, indemnify, demystify, personify, speechify, electrify.<br>
+-ate -> become: mediate, collaborate, create, accurate, appropriate, certificate, climate <br>
+-ise -> Become: publicize, synthesize, hypnotize, advertise, advise, apprise, arise, chastise, circumcise, comprise, compromis</p>
+
+<h4>Adjective Suffix Words List</h4>
+
+<p style="background-color:darkgreen;">-ible -> ability: flexible, sensible, possible, impossible, horrible, terrible, legible/illegible, flexible, inflexible, accessible, inaccessible, compatible, incompatible, comprehensible, credible, incredible, digestible, feasible, unfeasible, plausible, implausible, credible, incredible, resistible, irresistible, gullible, edible, inedible<br>
+-ish ->	a little: greenish, accomplish, relinquish, extinguish, outlandish, amateurish, impoverish<br>
+-able -> able to be: suitable, capable, comfortable, valuable, acceptable, remarkable, stable<br>
+-some -> a tendency to:	quarrelsome, handsome, gruesome, fearsome, tiresome, foursome, lonesome, liposome, ribosome<br>
+-em -> made of:	woolen, golden, wooden, sweeten, harden, flatten, lighten<br>
+-ful -> full of: beautiful, powerful. grateful. colorful. doubtful. unlawful. peaceful. faithful. dreadful.<br>
+-like -> similar to: lifelike, seamanlike, manlike, workmanlike, canelike, nutlike, sylphlike, apelike, trancelike.<br>
+-less -> without: careless, meaningless, harmless, ruthless, countless, restless, careless, needless, reckless, pointless, breathless, powerless, relentless, motionless, worthless, stainless, lifeless, timeless<br>
+-ous -> full of: cerous, comous, cymous, famous, fucous, iodous, joyous, lupous, miaous, mucous, nodous, odious, osmous, parous, pilous</p>
+
+<h4>Adverbs Suffix Words List</h4>
+
+<p style="background-color:darkgreen;">-ly -> in a manner: quickly, badly,
+beautifully, boldly, bravely, breathlessly, carefully, certainly,
+correctly, dangerously, dutifully, eagerly, effortlessly, evenly,
+eventually<br>
+-ward -> shows direction: forward, downward, backward, westward, eastward, windward, untoward, homeward, leftward.<br>
+-wise -> in a manner of: crabwise, umbrellawise, castlewise, circularwise, flockwise, yokewise, zigzagwise, spirewise, choirwise, clockwise<br>
+-ways -> shows direction: sideways, edgeways, fessways, lengthways, sunways, slantways</p>
+
+<h4>Prefix Words List</h4>
+
+<p style="background-color:red;">
+
+1.	Un-	Not; opposite of	Unhappy, untidy, unfair, unsure, unkind<br>
+2.	Re-	Again; back	Reread, rebuild, recover, revisit, rewrite<br>
+3.	Dis-	Not; opposite of	Dislike, disconnect, disagree, disapprove<br>
+4.	In-	Not; into	Invisible, incomplete, inhale, invade<br>
+5.	Pre-	Before; prior to	Preheat, prepay, preview, pretest<br>
+6.	Mis-	Wrong; incorrect	Misbehave, mislead, misplace, misprint<br>
+7.	Over-	Excessive; too much	Overcome, overlook, overeat, overreact<br>
+8.	Inter-	Between; among	Interact, interfere, interconnect<br>
+9.	Sub-	Under; below	Submerge, subside, subzero, subtitle<br>
+10.	Super-	Above; beyond	Supersize, superhero, supernatural<br>
+11.	Semi-	Half; partly	Semifinal, semiannual, semicolon<br>
+12.	Multi-	Many; much	Multiply, multitask, multifunctional<br>
+13.	Anti-	Against; opposite of	Antisocial, antiwar, antibiotic<br>
+14.	Micro-	Small; minute	Microscope, microwave, microorganism<br>
+15.	Auto-	Self; own	Autograph, automatic, autobiography<br>
+16.	Post-	After; later	Postpone, postwar, postscript<br>
+17.	Pre-	Before; prior to	Preschool, prepare, prevent, preside<br>
+18.	Neo-	New; recent	Neolithic, neoclassical, neo-Nazi<br>
+19.	Ex-	Former; out of	Ex-wife, ex-president, ex-convict<br>
+20.	Co-	Together; joint	Coexist, cooperate, coauthor<br>
+21.	De-	Opposite of; remove	Defrost, defuse, devalue, deactivate<br>
+22.	Fore-	Before; in advance	Foresee, forecast, forehead, forearm<br>
+23.	Trans-	Across; beyond	Transfer, transform, transatlantic<br>
+24.	Under-	Below; insufficient	Underestimate, underground, undergo<br>
+25.	Hyper-	Excessive; beyond	Hyperactive, hypersensitive, hyperbole<br>
+26.	Mega-	Great; million	Megabyte, megaphone, megalith<br>
+27.	Mini-	Small; miniature	Minibus, miniskirt, minivan<br>
+28.	Out-	Beyond; out of	Outshine, outgrow, outlive, outfield<br>
+29.	Up-	Higher; increased	Uplift, upgrade, upturn, upstairs<br>
+30.	Down-	Lower; decreased	Downsize, downturn, downgrade, downfall<br>
+31.	Mid-	Middle; halfway	Midnight, midpoint, midyear, midway<br>
+32.	Fore-	Before; in advance	Foresee, forecast, forehead<br> forearm<br>
+33.	Con-	Together; with	Connect, confer, concur, conform<br>
+34.	En-	Put into; cause to	Enclose, enable, enrich, encircle<br>
+35.	Extra-	Beyond; additional	Extracurricular, extraordinary<br>
+36.	Per-	Through; completely	Perceive, persist, persuade, perforate<br>
+37.	Pro-	Forward; in favor of	Promote, proceed, protect, provide<br>
+38.	Uni-	One; single	Unicycle, unison, uniform<br>
+39.	Bi-	Two; twice	Bicycle, binoculars, bilingual<br>
+40.	Tri-	Three	Tricycle, triangle, trilogy<br>
+41.	Quad-	Four	Quadrant, quadruple, quadratic<br>
+42.	De-	Opposite of; remove	Defrost, devalue, deactivate, declassify<br>
+</p>
+
+</body>
+</html>
